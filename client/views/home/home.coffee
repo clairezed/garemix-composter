@@ -1,10 +1,11 @@
 Template.home.rendered = ->
-  $('.owl-carousel').owlCarousel(
-    singleItem:true
-    )
-  params = Router.current().params
-  currentRoad = Roads.find()
+  #Carousel
+  $('.carousel').carousel({
+    interval: 10000
+  })
 
+  # Arduino click
+  currentRoad = Roads.find()
   observer = currentRoad.observeChanges
     changed: (id, fields) ->
       console.log("client road to");

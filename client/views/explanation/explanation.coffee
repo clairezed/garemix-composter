@@ -1,5 +1,4 @@
 Template.explanation.rendered = ->
-  console.log observer
   # params = Router.current().params
   currentRoad = Roads.find()
 

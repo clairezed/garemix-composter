@@ -26,6 +26,7 @@ $.fn.ticker = function( options ) {
             },
             texts = $.map( elems, function( elem ) {
                 var text = $(elem).text();
+
                 len = Math.max(len, text.length);
                 return options.uppercase ? text.toUpperCase() : text;
             }),
@@ -47,10 +48,15 @@ $.fn.ticker = function( options ) {
         $(this).replaceWith( render( texts[0].split('') ) );
 
         target.click(function(e) {
+            // console.log(target.data()); # prev object
 
             var next = fill(texts[k].split('')),
                 prev = fill(target.data('prev').split('')),
                 print = prev;
+            // console.log(next.join(''));
+            // console.log($("[data-cityname]").data('cityname'))
+            $("[data-cityname]").data('cityname', next.join(''))
+            // console.log(fill(texts[k]));
 
             $.each(next, function(i) {
                 if (next[i] == prev[i]) {

@@ -1,12 +1,18 @@
 template(name="game")
   div.game-container
+    button.btn.btn-primary(data-action="launch")  Dechet
+    div(data-cityname="CHARBO" style="display:none;")
+    embed(name="lostmojo" src="sf_afficheur_gare.mp3" loop="true" autostart="true" style="visibility:hidden;")
+    //- audio(controls='')
+    //-   source(src='/sf_afficheur_gare.mp3', type='audio/mpeg')
+    //- embed(src='/sf_afficheur_gare.mp3' loop='true' autostart='true')
+
+
+    //- p= randomCity
     //- h1 Jeu
     //- p
     //-   | Progression arbre :
     //-   = tree.count
-
-    ul.flip
+    ul.flip(data-city="#{randomCity._id}")
       each cities
         li= name
-      //- each cities
-      //-   li=.

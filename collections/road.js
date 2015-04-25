@@ -1,4 +1,4 @@
-Roads = new (Mongo.Collection)('roads');
+// Roads = new (Mongo.Collection)('roads');
 
 // var count = 0;
 // var query = Roads.find();
