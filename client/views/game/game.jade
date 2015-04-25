@@ -2,10 +2,10 @@ template(name="game")
   div.game-container
     button.btn.btn-primary(data-action="launch")  Dechet
     div(data-cityname="CHARBO" style="display:none;")
-    embed(name="lostmojo" src="sf_afficheur_gare.mp3" loop="true" autostart="true" style="visibility:hidden;")
-    //- audio(controls='')
-    //-   source(src='/sf_afficheur_gare.mp3', type='audio/mpeg')
-    //- embed(src='/sf_afficheur_gare.mp3' loop='true' autostart='true')
+    //- embed(id="sound" src="sf_afficheur_gare.mp3" loop="true" autostart="true" type='audio/mpeg')
+    //- style="visibility:hidden;"
+    audio(id="sound" controls='autoplay loop' style="visibility:hidden;")
+      source(src='/sf_afficheur_gare.mp3' type='audio/mpeg')
 
 
     //- p= randomCity

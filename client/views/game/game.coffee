@@ -23,6 +23,16 @@ Template.game.rendered = ->
     $('.flip').trigger('click');
   ,2000
 
+  #Sound
+  soundElement = document.getElementById('sound')
+  soundElement.play()
+  soundElement.addEventListener 'ended', (->
+    console.log "end sound"
+    @currentTime = 0
+    @play()
+    return
+  ), false
+
   # params = Router.current().params
   tree = Trees.find()
 
