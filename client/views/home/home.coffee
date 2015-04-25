@@ -1,9 +1,3 @@
-# Template.home.helpers
-#   tree: () ->
-#     return Trees.findOne()
-
-
-
 Template.home.rendered = ->
   $('.owl-carousel').owlCarousel(
     singleItem:true
@@ -15,4 +9,5 @@ Template.home.rendered = ->
     changed: (id, fields) ->
       console.log("client road to");
       console.log fields
-      Router.go(fields.currentRoad);
+      observer.stop() if fields.currentRoad is "explanation"
+      Router.go(fields.currentRoad)

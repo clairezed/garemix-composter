@@ -34,9 +34,17 @@ function changeRoute() {
     var currentRoad = Roads.findOne().currentRoad
     console.log(currentRoad);
     switch(currentRoad) {
+      // case "home":
+      //   console.log("go explanation");
+      //   Roads.update({}, {currentRoad: "explanation"});
+      //   break;
+      // case "explanation":
+      //   console.log("go game");
+      //   Roads.update({}, {currentRoad: "game"});
+      //   break;
       case "home":
-        console.log("go home");
-        Roads.update({}, {currentRoad: "explanation"});
+        console.log("go game");
+        Roads.update({}, {currentRoad: "game"});
         break;
       default:
         console.log("def raod");

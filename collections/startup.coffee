@@ -7,6 +7,12 @@ Meteor.startup ->
     Roads.insert currentRoad: "home"
   if Meteor.isServer
     Roads.update({}, {currentRoad: "home"})
+  if Meteor.isServer and Cities.find().count() == 0
+    for city in ["CHARBONNIERES LES BAINS", "CASINO LA CROIX LAVAL", "LA TOUR DE SALVAGNY", "LES FLACHERES"]
+        do ->
+          Cities.insert name: city
+
+
 
 
 

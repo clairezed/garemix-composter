@@ -1,5 +1,12 @@
 template(name="game")
-  h1 Jeu
-  p
-    | Progression arbre :
-    = tree.count
+  div.game-container
+    //- h1 Jeu
+    //- p
+    //-   | Progression arbre :
+    //-   = tree.count
+
+    ul.flip
+      each cities
+        li= name
+      //- each cities
+      //-   li=.
