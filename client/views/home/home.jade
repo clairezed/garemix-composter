@@ -1,0 +1,19 @@
+template(name="home")
+  h3 Test
+  div.owl-carousel
+    //- div.carousel-item
+    //-   h2 Destination d'enfer
+    //- div.carousel-item
+    //-   h2 Destination 2
+    //- div.carousel-item
+    //-   h2 Destination Trois
+    +carouselItem
+
+
+template(name="carouselItem")
+  div.carousel-item
+    h2 Destination d'enfer
+  div.carousel-item
+    h2 Destination 2
+  div.carousel-item
+    h2 Destination Trois
