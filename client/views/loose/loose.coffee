@@ -12,4 +12,4 @@ Template.loose.rendered = ->
 
   setTimeout (->
     Router.go('home')
-  ), 10000
+  ), 12000

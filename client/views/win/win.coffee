@@ -8,5 +8,5 @@ Template.win.rendered = ->
 
 
   setTimeout (->
-  #   Router.go('home')
-  #), 15000
+    Router.go('home')
+  ), 15000
