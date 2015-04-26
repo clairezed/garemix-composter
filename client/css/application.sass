@@ -3,19 +3,32 @@
 
 $green:  #95c11e
 
-html
-  min-height:100%
 
-body
-  min-height:100%
-  padding:0px
-  margin:0px
-  width:100%
+h1, h2, h3, h4, p
+  font-family: 'Open Sans', Arial, sans-serif
+  font-weight: 400
+
+h1, h2
+  font-weight: 700
 
 
-.container
-  width: 100%
-  padding: 35px 35px
+.container-fluid
+  background-color: #111
+  min-height: 100vh
+// html
+//   min-height:100%
+//   width: 100%
+
+// body
+//   min-height:100%
+//   padding:0px
+//   margin:0px
+//   width:100%
+
+
+// .container
+//   width: 100%
+//   padding: 35px 35px
 
 .carousel-item
   display: block
@@ -32,6 +45,8 @@ body
   cursor:pointer
   overflow:hidden
   font:80px/1 monospace
+  margin: 0 auto
+  margin-top: 15%
   span
     display:block
     float:left
@@ -40,24 +55,37 @@ body
     margin-right:1px
     // border: 1px solid #fff
 
+// GAME PAGE ====================
+ul.game-rules
+  margin-top: 20px
+  li
+    font-size: 2em
+    margin-bottom: 20px
+
 
 // Win - loose pages ================================
-.end-container
-  min-height: 100vh
-  background-color: #111
-  max-width: 100%
+
+// .end-container
+//   min-height: 100vh
+//   background-color: #111
+//   max-width: 100%
 
 .nav-row
-  height: 150px
+  height: 200px
   background-color: $green
-  max-width: 100%
-  margin-left:0
-  .end-title
-    color: #fff
-    // margin-top: 50px
-    position: relative;
-    top: 50%;
-    transform: translateY(-28%);
+  // max-width: 100%
+  // margin-left:0
+
+.end-title-block
+  padding: 35px 35px
+  height: 100%
+
+.end-title
+  color: #fff
+  font-size: 3em
+  position: relative
+  top: 30%
+  transform: translateY(-50%)
 
 .content-row
   height: 100%
@@ -69,7 +97,9 @@ body
 .airport-font
   margin-top: 5px
   background-color:#444
-  font:35px/1 monospace
+  font-family: monospace
+  font-size: 1.5em
+  line-height: 1
   padding: 3px 7px
 
 .interest-intro

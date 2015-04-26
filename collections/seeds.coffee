@@ -25,7 +25,7 @@ citiesArray = [
     time: 20,
     picture: "/chaponost.jpg",
     interest: "La rampe de l'aqueduc du Gier",
-    sentence: "J'ai déraillé mon Vélo'v"
+    sentence: "Le cactus de l'aiguilleur de train sent le sapin"
   },
   {
     name: "BRIGNAIS",

@@ -11,4 +11,4 @@ Template.home.rendered = ->
       console.log("client road to");
       console.log fields
       observer.stop() if fields.currentRoad is "explanation"
-      Router.go(fields.currentRoad)
+      Router.go(fields.currentRoad) if fields.currentRoad is "explanation"

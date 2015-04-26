@@ -19,24 +19,27 @@ Router.route "/game",
   waitOn: ->
     Meteor.subscribe 'tree'
 
-Router.route "/win/:_id",
-  controller: 'ApplicationController'
-  name: "win"
-  template: "win"
-  waitOn: ->
-    Meteor.subscribe 'city', @params._id
-  data: ->
-    Cities.findOne _id: @params._id
-
-Router.route "/loose/:_id",
-  controller: 'ApplicationController'
-  name: "loose"
-  template: "loose"
-  waitOn: ->
-    Meteor.subscribe 'city', @params._id
-  data: ->
-    Cities.findOne _id: @params._id
-
-
 class @ApplicationController extends RouteController
   # layoutTemplate: "layout"
+
+
+
+Router.route "/win/:_id",
+  controller: 'EndApplicationController'
+  name: "win"
+  template: "win"
+
+
+Router.route "/loose/:_id",
+  controller: 'EndApplicationController'
+  name: "loose"
+  template: "loose"
+
+
+
+class @EndApplicationController extends RouteController
+  waitOn: ->
+    Meteor.subscribe 'city', @params._id
+  data: ->
+    Cities.findOne _id: @params._id
+  onStop: -> Meteor.call 'resetRoad'

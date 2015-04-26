@@ -10,4 +10,7 @@ Meteor.methods
       result: result,
       cityId: currentCity._id
     }
+  resetRoad: ->
+    Roads.update({}, {currentRoad: "home"})
+
 
