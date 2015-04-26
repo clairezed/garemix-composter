@@ -14,6 +14,10 @@ var serialPort = new SerialPort.SerialPort("/dev/ttyACM0", {
         console.log("click btn");
         changeRoute();
         break;
+      case "2":
+        console.log("launch garbage");
+        upTree();
+        break;
       default:
         console.log("def");
       upTree();

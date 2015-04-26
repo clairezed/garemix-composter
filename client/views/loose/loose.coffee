@@ -10,6 +10,6 @@ Template.loose.rendered = ->
     $('.last-title').fadeIn()
   ), 3500
 
-  # setTimeout (->
-  #   Router.go('home')
-  # ), 10000
+  setTimeout (->
+    Router.go('home')
+  ), 10000
