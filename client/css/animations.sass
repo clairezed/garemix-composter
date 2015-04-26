@@ -1,0 +1,29 @@
+// @mixin transform($transforms)
+//   -moz-transform: $transforms
+//   -o-transform: $transforms
+//   -ms-transform: $transforms
+//   -webkit-transform: $transforms
+//   transform: $transforms
+
+
+// @-webkit-keyframes fadeInRight
+//   0%
+//     opacity: 1
+//     @include transform(translate3d(100%, 0, 0))
+//   100%
+//     opacity: 0
+//     @include transform(none)
+
+// @keyframes fadeInRight
+//   0%
+//     opacity: 1
+//     @include transform(translate3d(100%, 0, 0))
+//   100%
+//     opacity: 0
+//     @include transform(none)
+
+// .fadeInRight
+//   @include animation-name(fadeInRight)
+//   @include animation-iteration-count(infinite)
+//   @include animation-duration(2s)
+//   @include animation-fill-mode(both)

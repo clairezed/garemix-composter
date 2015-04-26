@@ -1,3 +1,6 @@
+// @import 'animate'
+// @import 'animations'
+
 $green:  #95c11e
 
 html
@@ -12,7 +15,7 @@ body
 
 .container
   width: 100%
-  padding: 3% 7%
+  padding: 35px 35px
 
 .carousel-item
   display: block
@@ -39,10 +42,16 @@ body
 
 
 // Win - loose pages ================================
+.end-container
+  min-height: 100vh
+  background-color: #111
+  max-width: 100%
 
 .nav-row
-  height: 20%
+  height: 150px
   background-color: $green
+  max-width: 100%
+  margin-left:0
   .end-title
     color: #fff
     // margin-top: 50px
@@ -51,6 +60,38 @@ body
     transform: translateY(-28%);
 
 .content-row
-  min-height: 100vh
+  height: 100%
   color: #fff
-  background-color: #111
+
+.logo-end
+  max-width: 200px
+
+.airport-font
+  margin-top: 5px
+  background-color:#444
+  font:35px/1 monospace
+  padding: 3px 7px
+
+.interest-intro
+  font-size: 2em
+  margin-top: 10%
+
+.interest
+  margin-top: 8%
+  font-size: 3.5em
+  font-weight: bold
+
+.sentence
+  font-size: 1.3em
+  margin-top: 18%
+  padding: 8px
+  border: 1px solid #fff
+
+.loose-img
+  background-color: #fff
+.end-col
+  padding: 0
+  overflow: hidden
+  height: 100%
+.end-img
+  max-width: 100%

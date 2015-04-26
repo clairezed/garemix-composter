@@ -9,37 +9,37 @@ citiesArray = [
    {
     name: "L ARBRESLE",
     time: 33,
-    picture: "/civrieux.jpg",
-    interest: "Le jardin de Nous-Deux",
-    sentence: "Qui du train ou du tram est arrivé en premier ?"
+    picture: "/arbresle.jpg",
+    interest: "Le couvent Ste-Marie de la Tourette",
+    sentence: "Ya des voies ferroviaires sous Fourvière"
   },
   {
     name: "CASINO LA CROIX LAVAL",
-    time: 33,
-    picture: "/civrieux.jpg",
-    interest: "Le jardin de Nous-Deux",
-    sentence: "Qui du train ou du tram est arrivé en premier ?"
+    time: 17,
+    picture: "/casino-lacroix.jpg",
+    interest: "Le Casino du Lyon Vert",
+    sentence: "Le contrôleur porte des chaussettes à paillettes"
   },
   {
     name: "CHAPONOST",
-    time: 33,
-    picture: "/civrieux.jpg",
-    interest: "Le jardin de Nous-Deux",
-    sentence: "Qui du train ou du tram est arrivé en premier ?"
+    time: 20,
+    picture: "/chaponost.jpg",
+    interest: "La rampe de l'aqueduc du Gier",
+    sentence: "J'ai déraillé mon Vélo'v"
   },
   {
     name: "BRIGNAIS",
-    time: 33,
-    picture: "/civrieux.jpg",
-    interest: "Le jardin de Nous-Deux",
-    sentence: "Qui du train ou du tram est arrivé en premier ?"
+    time: 25,
+    picture: "/brignais.jpg",
+    interest: " La vieille ville de Brignais",
+    sentence: "L'Ouest-Lyonnais c'est pas trou paumais"
   },
   {
     name: "CHARBONNIERE",
-    time: 33,
-    picture: "/civrieux.jpg",
-    interest: "Le jardin de Nous-Deux",
-    sentence: "Qui du train ou du tram est arrivé en premier ?"
+    time: 17,
+    picture: "/charbonniere.jpg",
+    interest: "Le parc de la Bressonnière",
+    sentence: "Ma carte Ou'RA sent le vin"
   }
 
 ]
