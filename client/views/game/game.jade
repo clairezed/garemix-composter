@@ -7,12 +7,6 @@ template(name="game")
     audio(id="sound" controls='autoplay loop' style="visibility:hidden;")
       source(src='/sf_afficheur_gare.mp3' type='audio/mpeg')
 
-
-    //- p= randomCity
-    //- h1 Jeu
-    //- p
-    //-   | Progression arbre :
-    //-   = tree.count
     ul.flip(data-city="#{randomCity._id}")
       each cities
         li= name
