@@ -1,3 +1,4 @@
+// Plugin flip des villes, template game ----------------------------
 $.fn.ticker = function( options ) {
 
     options = $.extend({

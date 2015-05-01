@@ -3,48 +3,53 @@ Template.game.helpers
     return Trees.findOne()
   cities: () ->
     Cities.find()
+  # 1er essai : on tombe sur une ville choisi complètement au hasard.
+  # Finalement j'ai réussi à mieux faire.
   randomCity: () ->
     randomFromCollection(Cities)
 
 
 Template.game.events
+  # Simulation des conséquences d'un lançage de déchet, si pas d'arduino
   'click [data-action=launch]': (event, template) ->
     tree = Trees.findOne()
-    console.log tree._id
     Trees.update({_id: tree._id}, {$inc: {count: +1}})
 
 
 Template.game.rendered = ->
-  # Launch flip
+  # Launch cities flip -----------------------------------------------------
   $('.flip').ticker()
 
-  # Auto flip
+  # Auto flip -------------------------------------------------------
   interval = setInterval ()->
     $('.flip').trigger('click');
   ,2000
 
-  #Sound
+  # Sound -----------------------------------------------------------
+  # Pour palier aux comportements erratiques des différents navigateurs,
+  # relance automatique en js du lecteur audio
   soundElement = document.getElementById('sound')
   soundElement.play()
   soundElement.addEventListener 'ended', (->
-    console.log "end sound"
     @currentTime = 0
     @play()
     return
   ), false
 
-  # params = Router.current().params
+  # Compteur arbre --------------------------------------------------
+  # Captation du lançage de déchet
   tree = Trees.find()
 
   observer = tree.observeChanges
     changed: (id, fields) ->
       console.log "tree change !"
 
+      # On fige le 'flip'
       clearTimeout(interval)
-      # cityId = $("[data-city]").data('city')
-      # console.log cityId
+      # On récupère le nom de la ville sur laquelle le jeu s'est figé
       cityName = $("[data-cityname]").data('cityname').trim()
 
+      # Détermination du résultat (win / loose) et passage aux écrans de fin
       randomResultCallback = (error, data) ->
         setTimeout (->
           console.log "Callback result"
@@ -60,6 +65,7 @@ Template.game.rendered = ->
 
 
 
+# Methodes pour choisir une ville au hasard (non utile actuellement)----
 
 randomInRange = (min, max) ->
   random = Math.floor(Math.random() * (max - min + 1)) + min

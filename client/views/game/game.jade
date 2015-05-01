@@ -1,9 +1,8 @@
 template(name="game")
   div.game-container
-    // button.btn.btn-primary(data-action="launch")  Dechet
+    //- Bouton permettant de simuler lançage de déchet si pas d'arduino branché :
+    //- button.btn.btn-primary(data-action="launch")  Dechet
     div(data-cityname="CHARBONNIERE" style="display:none;")
-    //- embed(id="sound" src="sf_afficheur_gare.mp3" loop="true" autostart="true" type='audio/mpeg')
-    //- style="visibility:hidden;"
     audio(id="sound" controls='autoplay loop' style="visibility:hidden;")
       source(src='/sf_afficheur_gare.mp3' type='audio/mpeg')
 

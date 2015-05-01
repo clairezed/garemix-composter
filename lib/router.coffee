@@ -2,9 +2,9 @@ Router.route "/",
   controller: 'ApplicationController'
   name: "home"
   template: "home"
-  waitOn: ->
-    Meteor.subscribe 'tree'
-    Meteor.subscribe 'road'
+  # waitOn: ->
+  #   Meteor.subscribe 'tree'
+  #   Meteor.subscribe 'road'
 
 Router.route "/explanation",
   controller: 'ApplicationController'
@@ -20,8 +20,6 @@ Router.route "/game",
     Meteor.subscribe 'tree'
 
 class @ApplicationController extends RouteController
-  # layoutTemplate: "layout"
-
 
 
 Router.route "/win/:_id",
@@ -34,8 +32,6 @@ Router.route "/loose/:_id",
   controller: 'EndApplicationController'
   name: "loose"
   template: "loose"
-
-
 
 class @EndApplicationController extends RouteController
   waitOn: ->

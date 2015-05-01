@@ -1,3 +1,6 @@
+# Début de définition de publications
+# (mais le package meteor autopublish est toujours intégré)
+
 Meteor.publish 'tree', () ->
   Trees.find { }, {limit: 1}
 

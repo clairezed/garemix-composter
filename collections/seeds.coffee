@@ -1,3 +1,5 @@
+# Villes Ouest lyonnais =============================================
+
 citiesArray = [
   {
     name: "CIVRIEUX D AZERGUES",
@@ -46,15 +48,24 @@ citiesArray = [
 
 
 # seeds ====================================================================
+
 Meteor.startup ->
+  # Initialisation du compteur arbre
   if Meteor.isServer and Trees.find().count() == 0
+    console.log "Inserting Tree"
     Trees.insert count: 0
+  # Initialisation du routage physique
   if Meteor.isServer and Roads.find().count() == 0
+    console.log "Inserting Road"
     Roads.insert currentRoad: "home"
+  # Remise à zéro du routage physique :
   if Meteor.isServer
+    console.log "Updating Road"
     Roads.update({}, {currentRoad: "home"})
+
+  # Initialisation des villes disponibles dans l'application
   if Meteor.isServer and Cities.find().count() == 0
     for city in citiesArray
       do ->
-        console.log city
+        console.log "Inserting city #{city.name}"
         Cities.insert name: city.name, time: city.time, picture: city.picture, interest: city.interest, sentence: city.sentence
