@@ -62,4 +62,4 @@ The program automatically reboots routing.
 
 ### Warning
 
-This application was developped in 2 days by a single person, in order to have a full size (taille réelle) prototype work for only 2 hours. Therefore, it's neither optimized, nor secure or 100% reliable. Please be indulgent with code quality, as well.
+This application was developped in 2 days by a single person, in order to have a life size prototype working and being tryed out for 2 hours. Therefore, it's neither optimized, nor secure or 100% reliable !
