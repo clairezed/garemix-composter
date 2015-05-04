@@ -1,23 +1,22 @@
-## Compost'TER - web part
+## Compost'TER - web application. Garemix, Lyon, 2015
 
-Compost'TER is a 3-day-built project created during the event Garemix, Lyon, 2015.
+Compost'TER is a 3-day-built project created during the event Garemix, aiming to innovate and invent new services in Lyon Saint Paul train station. Compost'TER is an interactive compost an recycle bin, fostering the touristic development of the area served by the station, and creating social link in the district. Compost'TER was led by a 5 people team and mixes arduino, web application, wood and cardboard (and many other things). More info on [Garemix website](http://garemixsaintpaul.grandlyon.com/index.php/les-lampistes/)
 
-It was led by a 5 people team, and here is the web / screen side of the project. This web application communicate with arduino captors and displays screens and information following the data that is sent by the captors.
-
-
+Here is the web / screen side of the project. This web application communicates with arduino sensors and displays screens and information following the data that is sent by the sensors. It's written in javascript, through the framework [meteor.js](https://www.meteor.com/) that enables realtime communication between server and client.
 
 
 ### How to install the application
 
 1. Install meteor
+`$ curl https://install.meteor.com | /bin/sh`
 
 2. Clone this repository
 `$ git clone ....`
 
-3. Plug the arduino cart on a usb port (via usb/serial wire)
+3. Plug the arduino board on a usb port (via usb/serial wire)
 
 4. Check the address of your serial port.
-One way to do it is to install arduino, and check in the top menu on which port is the arduino cart sending its signal.
+One way to do it is to install arduino, and check in the top menu on which port is the arduino board sending its signal.
 
 5. Change the address of the serial port in the file `/server/serialPort.js`
 
@@ -25,30 +24,31 @@ One way to do it is to install arduino, and check in the top menu on which port 
 
 #### With arduino plugged on serial port
 
-`$ cd composter`
-`$ meteor`
+1. `$ cd composter`
+2. `$ meteor`
 
-If 'Port open' appears in your terminal, everything is working
+If *'Port open'* appears in your terminal, everything is working
+
+3. Open a browser and go to `localhost:3000/`
 
 #### Without arduino plugged on serial port
 
-For debuggning purpose, you may want to launch the app without arduino plugged.
+For debugging purpose, you may want to launch the app without arduino plugged.
 
-First, you need to comment the whole file `/server/serialPort.js`. Then, do as in the previous part :
+1. First, you need to comment the whole file `/server/serialPort.js`. Then, do as in the previous part :
 
-`$ cd composter`
-`$ meteor`
-Open a browser and go to `localhost:3000/`
+2. `$ cd composter`
+3. `$ meteor`
+4. Open a browser and go to `localhost:3000/`
 
 ### In case of bug
 
 #### Arduino is plugged but serial port isn't recognised
 
-- Shut down the application
-In your terminal : Ctrl-C
-- unplug the arduino
-- plug it back
-- relaunch the application (`meteor` in the project directory)
+1. Shut down the application : In your terminal, type Ctrl-C
+2. unplug the arduino board
+3. plug it back
+4. relaunch the application (`meteor` in the project directory)
 
 #### The program is blocked at the wrong screen
 
